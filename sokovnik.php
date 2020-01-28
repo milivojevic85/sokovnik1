@@ -48,15 +48,20 @@ class PosudaZaVoce
 	}
 }
 
-class Cedaljka 
+class Cedaljka extends Logovanje
 {
-	public function cediVoce(PosudaZaVoce $voceUposudi) {
+	private $ispis;
+	public function cediVoce(/* voceUposudi */) {
+		$this->details = "Cedaljka cedi voce" ;
+		$this->ispis = $this->trenutno();
 		// dobijeno toliko i toliko soka 40% tezine $voceUposudi
 	}
 	
 }
 
-$voceUposudi = new PosudaZaVoce();
+$cedaljka1 = new Cedaljka();
+$cedaljka1->cediVoce();
+
 ?>
 </body>
 </html>
